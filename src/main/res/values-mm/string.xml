@@ -1,0 +1,31 @@
+<resources>
+    <string name="gcm_defaultSenderId">922502154229</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="app_name">Pwel App</string>
+    <string name="main_name">Event</string>
+    <string name="action_settings">ျပင္ဆင္ရန္</string>
+
+    <string name="spinner_cat_title">Category_mm</string>
+    <string name="spinner_location_title">Location_mm</string>
+    <string name="spinner_time_title">This Weekend_mm</string>
+
+    <string name="hot_event">Hot Event_mm</string>
+    <string name="cat_1"> ပါတီ </string>
+    <string name="cat_2">Exhibitions_mm</string>
+    <string name="cat_3">Music_mm</string>
+
+    <string name="address">လိပ္စာ</string>
+    <string name="map">ေျမပံု</string>
+    <string name="create_by">ပဲြစီစဥ္သူ</string>
+    <string name="orgnizer">Oragnizer_mm :</string>
+    <string name="venue">က်င္းပမည္႔ ေနရာ :</string>
+    <string name="time">အခ်ိန္ :</string>
+    <string name="contact">ဆက္သြယ္ရန္:</string>
+    <string name="detail">အခ်က္အလက္ အျပည္႔အစံု</string>
+    <string name="info">Infomation</string>
+
+    <string name="title_activity_searchable_">Searchable_Activity</string>
+    <string name="title_activity_setting_">Setting_Activity</string>
+    <string name="title_activity_facebook_login_">Facebook Login</string>
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.eunovate.eunovatedev.pwelapp.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"
+            />
+        <TableRow
+            android:id="@+id/div_tableRow1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+
+            android:layout_alignParentTop="true"
+            android:background="@color/primary"
+            android:layout_width="match_parent">
+
+            <Button
+                android:id="@+id/hot_event"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/txt_normal"
+                android:onClick="get_hot_event"
+                android:layout_weight=".3"
+                android:textAllCaps="false"
+                android:background="@color/primary"
+                android:layout_width="match_parent"
+                android:text="@string/hot_event"/>
+
+            <Button
+                android:id="@+id/cat1_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight=".3"
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/txt_normal"
+                android:textAllCaps="false"
+                android:background="@color/primary"
+                android:onClick="get_party"
+                android:text="@string/cat_1"/>
+
+            <Button
+                android:id="@+id/cat2_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight=".3"
+
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/txt_normal"
+                android:textAllCaps="false"
+                android:background="@color/primary"
+                android:onClick="get_exhibitions"
+                android:text="@string/cat_2"/>
+
+            <Button
+                android:id="@+id/cat3_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight=".3"
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/txt_normal"
+                android:textAllCaps="false"
+                android:background="@color/primary"
+                android:onClick="get_music_event"
+                android:text="@string/cat_3"/>
+        </TableRow>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/event_refresh_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dfdfdf"
+        android:padding="7dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.eunovate.eunovatedev.pwelapp.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+
+        <ListView
+            android:id="@+id/evnt_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"></ListView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/msg_txt"
+            android:layout_height="wrap_content"
+            android:text="Sorry!"
+            android:visibility="visible"
+
+            android:textColor="@color/accent"
+            android:layout_gravity="center"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:layout_marginTop="75dp"/>
+        <ImageView
+            android:id="@+id/msg_pic"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/no_data"
+            android:visibility="visible"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_filter_list_white_24dp" />
+</android.support.design.widget.CoordinatorLayout>

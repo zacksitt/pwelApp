@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.AppCompat.ActionBar"
+                android:padding="5dp"
+                android:layout_alignParentTop="true"
+                android:prompt="@string/spinner_cat_title"/>
+
+            <Spinner
+                android:id="@+id/spinner_sub_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.AppCompat.ActionBar"
+                android:padding="5dp"
+                android:layout_below="@id/spinner_category"
+                android:prompt="@string/spinner_cat_title"/>
+
+            <Spinner
+                android:id="@+id/spinner_location"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:layout_below="@id/spinner_sub_category"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_location_title"
+                style="@style/Base.Widget.AppCompat.Spinner"/>
+
+
+            <Spinner
+                android:id="@+id/spinner_time"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:layout_below="@+id/spinner_location"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_time_title"/>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:textColor="@color/accent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_time"
+        android:text="Search"
+        android:layout_toStartOf="@+id/cancel"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:textColor="@color/accent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_below="@id/spinner_time"
+        android:text="Cancel"
+        android:layout_alignParentRight="true"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+        </RelativeLayout>
+
+

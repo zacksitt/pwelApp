@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/event_cardview"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                >
+                <TextView
+                    android:id="@+id/evnt_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EVNT_ID"
+                    android:visibility="gone"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:id="@+id/eimage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/date_gup"
+                    android:layout_marginTop="7dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/date_gup"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/day"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/accent"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="22"/>
+                    <TextView
+                        android:id="@+id/month"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="13dp"
+                        android:text="June"
+                        android:layout_below="@+id/day"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:id="@+id/ename"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="15sp"
+                    android:text="How an obsession turned"
+                    />
+                <TextView
+                    android:id="@+id/save_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"/>
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/eimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/venue"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sedona"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/venue"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/accent"
+                    android:layout_alignBaseline="@id/venue"
+                    android:text=" | "/>
+                <TextView
+                    android:id="@+id/subcat_desc"
+                    android:textColor="@color/secondary_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/venue"
+                    android:textSize="12dp"
+                    android:layout_alignBaseline="@+id/venue"
+                    android:clickable="true"
+                    android:onClick="get_event_by_cat"
+                    android:text="Party"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent"
+                        android:layout_toEndOf="@id/subcat_desc"
+                        android:layout_marginLeft="5dp"
+                        android:layout_alignBaseline="@id/venue"
+                        android:text=" | "/>
+
+                <TextView
+                    android:id="@+id/type"
+                    android:textColor="@color/secondary_text"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@id/subcat_desc"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/venue"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Free "/>
+                </RelativeLayout>
+                </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+</LinearLayout>

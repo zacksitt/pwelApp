@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eunovate.eunovatedev.pwelapp.EventDetail_Activity">
+
+<RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        />
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/mytoolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/primary"-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/back_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_arrow_back_white_24dp"-->
+            <!--android:background="@color/primary"-->
+            <!--android:layout_marginTop="17dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:onClick="back"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toEndOf="@+id/back_icon"-->
+            <!--android:layout_marginTop="17dp"-->
+            <!--android:textSize="17dp"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:textColor="@color/txt_normal"-->
+            <!--android:text="Event Info"/>-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/date_gup"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tool_bar"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/accent"
+            android:textSize="13dp"
+            android:layout_height="wrap_content"
+            android:text="22"/>
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:textSize="15dp"
+            android:text="June"
+            android:layout_below="@+id/day"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/evnt_title"
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/tool_bar"
+            android:layout_marginLeft="55dp"
+            android:textSize="15sp"
+            android:text="How an obsession turned"
+            />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:id="@+id/evnt_img"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/date_gup"
+                />
+
+    <RelativeLayout
+        android:id="@+id/txt_gup"
+        android:layout_below="@+id/evnt_img"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subcat_desc"
+            android:textColor="@color/accent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:clickable="true"
+            android:onClick="get_event_by_cat"
+            android:text="Party"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/subcat_desc"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/accent"
+            android:layout_alignBaseline="@id/subcat_desc"
+            android:text=" | "/>
+
+        <TextView
+            android:id="@+id/organizer_lbl"
+            android:textColor="@color/secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/subcat_desc"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/subcat_desc"
+            android:layout_marginLeft="15dp"
+            android:text="@string/create_by"/>
+
+
+        <TextView
+            android:id="@+id/evnt_orgnaziner"
+            android:textColor="@color/secondary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/subcat_desc"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/organizer_lbl"
+            android:layout_marginLeft="5dp"
+            android:text="Yangon Party"
+            />
+
+    </RelativeLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/venue_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_gup"
+        android:layout_alignLeft="@+id/txt_gup"
+        android:layout_marginTop="15dp"
+        android:background="#fff"
+        android:src="@drawable/ic_location_on_black_24dp"/>
+
+    <TextView
+        android:id="@+id/evnt_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/accent"
+        android:text="@string/venue"
+        android:layout_alignBaseline="@+id/venue_icon"
+        android:layout_below="@id/txt_gup"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="75dp"
+        android:textSize="12dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/contact_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact"
+        android:layout_below="@id/venue_icon"
+        android:layout_alignRight="@id/venue_icon"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:src="@drawable/ic_contact_phone_black_24dp"/>
+
+    <TextView
+        android:id="@+id/evnt_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_text"
+        android:text="@string/contact"
+        android:layout_below="@id/evnt_venue"
+        android:layout_alignLeft="@+id/evnt_venue"
+        android:layout_marginTop="20dp"
+        android:textSize="12dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/time_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact"
+        android:layout_below="@id/contact_icon"
+        android:layout_alignRight="@+id/contact_icon"
+        android:layout_marginTop="15dp"
+        android:background="#fff"
+        android:src="@drawable/ic_access_time_black_24dp"/>
+
+    <TextView
+        android:id="@+id/evnt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_text"
+        android:text="7:00 PM "
+        android:layout_alignLeft="@+id/evnt_venue"
+        android:layout_below="@+id/evnt_contact"
+        android:layout_marginTop="27dp"
+        android:textSize="12dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_icon"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/primary_text"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/des_label"
+        android:text="@string/detail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/des_label"
+        android:layout_marginLeft="16dp"
+        android:textSize="14dp"
+        android:id="@+id/evnt_des"
+        android:layout_marginTop="7dp"
+        android:text="hello i'm description"/>
+
+    <TextView
+                android:id="@+id/add_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/evnt_des"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="18dp"
+                android:textColor="@color/primary_text"
+                android:text="@string/address"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/secondary_text"
+                android:textSize="14dp"
+                android:id="@+id/address"
+                android:layout_below="@+id/add_lable"
+                android:text="Gallery 65, Yaw Min Gyi Street, Yangon, Yangon Region, Myanmar (Burma)"
+                />
+            <TextView
+                android:id="@+id/map_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="18dp"
+                android:textColor="@color/primary_text"
+                android:text="@string/map"/>
+
+            <include
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/map_label"
+                android:layout_marginTop="12dp"
+                layout="@layout/map_fragment" />
+
+        </RelativeLayout>
+
+</ScrollView>

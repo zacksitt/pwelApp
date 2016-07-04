@@ -1,0 +1,36 @@
+<resources>
+    <string name="facebook_app_id" translatable="false">1647134652175629</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1647134652175629</string>
+    <string name="gcm_defaultSenderId">922502154229</string>
+    <string name="app_name">Pwel App</string>
+    <string name="main_name">Event</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="spinner_cat_title">Category</string>
+    <string name="spinner_location_title">Location</string>
+    <string name="spinner_time_title">This Weekend</string>
+
+    <string name="hot_event">Hot Event</string>
+    <string name="cat_1">Party</string>
+    <string name="cat_2">Exhibitions</string>
+    <string name="cat_3">Music</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="address">Address</string>
+    <string name="map">Map</string>
+    <string name="create_by">Create By</string>
+    <string name="orgnizer">Oragnizer :</string>
+    <string name="venue">Venue :</string>
+    <string name="time">Time :</string>
+    <string name="contact">Contact :</string>
+    <string name="detail">Detail</string>
+    <string name="info">Infomation</string>
+    <string name="google_maps_key">AIzaSyABAphb5-L4cXhgoo7J6Huz7_WtaS9_pcs</string>
+    <string name="title_activity_searchable_">Searchable_Activity</string>
+    <string name="title_activity_setting_">Setting_Activity</string>
+    <string name="title_activity_facebook_login_">Facebook Login</string>
+
+    <string name="save">Save</string>
+</resources>
